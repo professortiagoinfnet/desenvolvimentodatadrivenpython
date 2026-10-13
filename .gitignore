@@ -1,0 +1,178 @@
+
+# ============================================================
+# PYTHON
+# ============================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# ============================================================
+# AMBIENTES VIRTUAIS
+# ============================================================
+
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# ============================================================
+# BUILD E DISTRIBUIÇÃO
+# ============================================================
+
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+pip-wheel-metadata/
+
+# ============================================================
+# VARIÁVEIS DE AMBIENTE E CREDENCIAIS
+# ============================================================
+
+.env
+.env.*
+!.env.example
+!.env.template
+
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials.json
+
+# ============================================================
+# FASTAPI / UVICORN
+# ============================================================
+
+*.log
+logs/
+*.pid
+
+# ============================================================
+# HUGGING FACE / TRANSFORMERS
+# ============================================================
+
+.cache/
+.cache/huggingface/
+huggingface/
+hf_cache/
+
+# Modelos e checkpoints locais
+models/
+checkpoints/
+outputs/
+runs/
+
+# Pesos de modelos
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.onnx
+*.gguf
+*.ggml
+
+# Checkpoints de treinamento
+checkpoint-*/
+trainer_state.json
+training_args.bin
+events.out.tfevents.*
+
+# ============================================================
+# PYTORCH / TENSORFLOW
+# ============================================================
+
+lightning_logs/
+tensorboard/
+wandb/
+mlruns/
+mlartifacts/
+
+# ============================================================
+# LANGCHAIN / LANGGRAPH / VECTOR DATABASES
+# ============================================================
+
+.langchain/
+.langgraph_api/
+.langgraph_api*/
+.langsmith/
+
+# Bancos vetoriais locais
+chroma/
+chroma_db/
+chroma_data/
+.chroma/
+qdrant_storage/
+faiss_index/
+vectorstore/
+vector_store/
+
+# ============================================================
+# BANCOS DE DADOS LOCAIS
+# ============================================================
+
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+
+# ============================================================
+# DADOS GERADOS E ARQUIVOS TEMPORÁRIOS
+# ============================================================
+
+tmp/
+temp/
+.cache/
+data/raw/
+data/processed/
+
+# Arquivos de dados locais grandes
+*.parquet
+*.feather
+*.arrow
+
+# ============================================================
+# JUPYTER NOTEBOOK
+# ============================================================
+
+.ipynb_checkpoints/
+.profile/
+
+# ============================================================
+# IDE / EDITORES
+# ============================================================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ============================================================
+# SISTEMA OPERACIONAL
+# ============================================================
+
+.DS_Store
+Thumbs.db
+desktop.ini
