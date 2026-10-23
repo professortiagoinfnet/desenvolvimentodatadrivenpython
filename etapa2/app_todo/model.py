@@ -6,3 +6,6 @@ class Todo(BaseModel):
 
 class TodoOut(BaseModel):
     item: str
+
+class TodoIn(BaseModel):
+    item: str

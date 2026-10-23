@@ -1,5 +1,5 @@
-from fastapi import APIRouter
-from model import Todo, TodoOut
+from fastapi import APIRouter, HTTPException
+from etapa2.app_todo.model import Todo, TodoOut, TodoIn
 
 todo_router = APIRouter()
 
@@ -71,5 +71,18 @@ async def retreive_todo_responsemodel(todo_id: int):
 async def todos_responsemodel():
     return todos
 
+@todo_router.get("/todo_httpexception", response_model=TodoOut)
+async def retreive_todo_httpexception(todo_id: int):
+    for todo in todos:
+        if todo.id == todo_id:
+            return todo
 
+    raise HTTPException(
+        status_code=404,
+        detail=f"todo_id '{todo_id}' não encontrado."
+    )
 
+@todo_router.post("/todo_httpexception", response_model=TodoOut, status_code=201)
+async def add_todo_httpexception(todo: TodoIn):
+    todos.append(Todo(id=len(todos), item=todo.item))
+    return todo
